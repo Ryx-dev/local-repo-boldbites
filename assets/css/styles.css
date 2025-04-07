@@ -1,0 +1,701 @@
+
+@keyframes fade-down {
+    0%{
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9)
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+@keyframes fade-up {
+    0%{
+        opacity: 0;
+        transform: translateY(30px) scale(0.9)
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+
+:root {
+    --baby-powder: #FCFAF4;
+    --sienna: #7D2F13;
+    --orange-crayola: #F16E2E;
+    --golden-gate-bridge: #F64704;
+    --licorice: #2F2121;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--baby-powder);
+    color: var(--licorice);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Navbar styling */
+
+ /* remove dropdown  arrow icon */
+.navbar .dropdown-toggle::after {
+    content:  none;  
+}
+.navbar {
+    background-color: var(--baby-powder);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    animation: fade-down 0.5s;
+}
+
+.navbar-brand {
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 700;
+    color: var(--sienna);
+    
+}
+.boldbites img{
+    margin-left: 50;
+}
+.navbar-brand:hover {
+    color: var(--golden-gate-bridge);
+}
+
+.navbar-toggler {
+    background-color: var(--licorice);
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(235, 232, 219, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.nav-item {
+    position: static;
+}
+
+.nav-link {
+    color: var(--licorice);
+    /* font-weight: 500; */
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: var(--orange-crayola) !important;
+}
+
+/* Dropdown styling */      
+
+.dropdown-menu {
+    background-color: var(--baby-powder);
+    border-radius: 0;
+    border: none;
+    padding: 20px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+}
+
+.mega-menu {
+    width: 100%;
+    padding: 20px;
+}
+
+.column-header {
+    color: var(--sienna);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--orange-crayola);
+}
+
+.mega-menu-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.mega-menu-link {
+    display: block;
+    padding: 8px 0;
+    color: var(--licorice);
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.mega-menu-link:hover {
+    color: var(--orange-crayola);
+    transform: translateX(5px);
+}
+
+
+
+
+/* Mobile dropdown customization */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: var(--baby-powder);
+    }
+
+    .dropdown-menu {
+        background-color: rgba(255, 255, 255, 0.05);
+        border: none;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .mega-menu {
+        padding: 0;
+    }
+
+    .column-header {
+        color: var(--sienna);
+        border-bottom-color: var(--orange-crayola);
+        padding: 10px 15px;
+        margin: 0;
+    }
+
+    .mega-menu-list {
+        padding: 0 15px 15px 15px;
+    }
+
+    .mega-menu-link {
+        color: var(--licorice);
+        opacity: 0.8;
+        padding: 8px 0;
+    }
+
+    .mega-menu-link:hover {
+        color: var(--orange-crayola);
+    }
+
+    /* .featured-section {
+        display: none;
+    } */
+
+    .nav-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-link {
+        padding: 15px !important;
+    }
+}
+
+/*  buttton  */
+
+.btn-primary {
+    background-color: var(--sienna);
+    border-color: var(----sienna) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--orange-crayola);
+    border-color: var(--orange-crayola) !important;
+}
+
+.btn-outline-primary {
+    border-color: var(--sienna) !important;
+    color: var(--sienna);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--sienna);
+    color: white;
+
+}
+/* hero section */
+.hero {
+    padding: 120px 0;
+    background-color: var(--baby-powder);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--dark);
+    opacity: 0.8;
+}
+
+.hero-img {
+    /* object-fit: cover; */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    max-height: 500px;
+}
+.hero p,.hero a,.hero-img,.hero h1{
+animation-delay: 10s;
+animation: fade-up 0.5s;
+}
+/* about section */
+.about {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.about-img {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* feature-section */
+.feature-card {
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--baby-powder);
+    color: var(--sienna);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+ .description{
+    max-width: 600px;
+    margin-bottom: 10px ;
+}
+.products {
+    padding: 100px 0;
+    background-color: var(--baby-powder);
+}
+
+.product-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.product-img {
+    height: 300px;
+    object-fit: cover;
+}
+
+
+.product-price {
+    color: var(--golden-gate-bridge);
+    font-weight: 600;
+}
+
+.testimonials {
+    padding: 100px 0;
+    background-color: white;    
+}
+
+.testimonial-card {
+    padding: 30px;
+    border-radius: 15px;
+    background-color: var(--baby-powder);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.testimonial-card::before {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 4rem;
+    color: var(--orange-crayola);
+    opacity: 0.3;
+    font-family: 'Playfair Display', serif;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.contact {
+    padding: 100px 0;
+    background-color: var(--baby-powder);
+}
+
+.contact-info {
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    height: 100%;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--baby-powder);
+    color: var(--sienna);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.form-control:focus {
+    border-color: var(--golden-gate-bridge);
+    box-shadow: 0 0 0 0.25rem rgba(246, 71, 4, 0.25);
+}
+
+footer {
+    padding: 60px 0 30px;
+    background-color: var(--licorice);
+    color: white;
+}
+
+.footer-links a {
+    color: var(--baby-powder);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--orange-crayola);
+    padding-left: 5px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+    color: var(--baby-powder);
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--orange-crayola);
+    transform: translateY(-5px);
+}
+
+.copyright {
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 30px;
+}
+
+/* birthday cake collection */
+
+.birthday-cake-collection{
+    background-color: white;
+    padding: 100px;
+} 
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 0;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-img {
+        margin-top: 30px;
+    }
+    
+    .about, .products, .testimonials, .contact {
+        padding: 60px 0;
+    }
+}
+
+
+/* BLOG PAGE STYLING */
+
+.blog-hero {
+    background-color: white;
+    padding: 80px 0;
+}
+
+.blog-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.blog-img {
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blog-category {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: var(--baby-powder);
+    color: var(--sienna);
+    font-weight: 500;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.blog-date {
+    color: var(--licorice);
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+.blog-author {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.blog-author-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 60%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.sidebar-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+/*  customization of badge */
+.rounded-pill{
+    background-color: var(--orange-crayola) !important;
+}
+/* Custom Pagination Styling */
+.pagination .page-item .page-link {
+color: var(--sienna);
+background-color: white;
+border-color: #dee2e6;
+border-radius: 8px;
+margin: 0 3px;
+transition: all 0.3s ease;
+}
+
+.pagination .page-item.active .page-link {
+background-color: var(--orange-crayola);
+border-color: var(--orange-crayola);
+color: white;
+}
+
+.pagination .page-item .page-link:hover {
+background-color: var(--orange-crayola);
+border-color: var(--orange-crayola);
+color: var(--baby-powder);
+}
+
+.tag-cloud a {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: var(--baby-powder);
+    color: var(--licorice);
+    border-radius: 20px;
+    margin: 0 5px 10px 0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.tag-cloud a:hover {
+    background-color: var(--orange-crayola);
+    color: white;
+}
+
+.recent-post {
+    display: flex;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.recent-post:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.recent-post-img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.recent-post-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.recent-post-date {
+    font-size: 12px;
+    color: var(--licorice);
+    opacity: 0.7;
+}
+
+.search-form .form-control {
+    border-radius: 30px 0 0 30px;
+    height: 50px;
+    padding-left: 20px;
+}
+
+.search-form .btn {
+    border-radius: 0 30px 30px 0;
+    height: 50px;
+}
+
+
+#mini-donut-series .product-img {
+    object-fit: contain;
+}
+
+
+
+
+/* CAKE MAINTAIN FRESHNESS STYLING */
+
+
+
+/* Related posts images */
+.related-post-img {
+    max-height: 100px;
+    width: 100%;
+    object-fit: cover ;
+}
+
+/* Comment avatars */
+.comment-avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+/* Author image */
+.author-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+/* comment author */
+.comment-author-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+
+/* blog img  section styling */
+
+.blog-img-content-section {
+    height: 60vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+/* just added */
+
+
+
+/* Add this to your existing CSS file (styles.css) */
+
+/* Style for active category */
+.active-category {
+    font-weight: bold;
+}
+
+.active-category a {
+    color: var(--primary-color) !important;
+}
+
+/* Animation for showing/hiding blog posts */
+.blog-card {
+    transition: opacity 0.3s ease;
+}
+
+/* Category labels styling enhancement */
+.blog-category {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.blog-category:hover {
+    opacity: 0.8;
+}
+
+/* Category count badge styling */
+.badge.bg-primary {
+    transition: transform 0.2s ease;
+}
+
+.active-category .badge.bg-primary {
+    transform: scale(1.1);
+}
