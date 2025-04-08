@@ -69,12 +69,15 @@ h1, h2, h3, h4 {
 }
 
 .navbar-toggler {
+    box-shadow: none;
+    outline: none;
     background-color: var(--licorice);
     margin-right: 15px;
     margin-bottom: 15px;
 }
 
 .navbar-toggler-icon {
+   
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(235, 232, 219, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
@@ -231,7 +234,6 @@ h1, h2, h3, h4 {
 }
 
 .hero-img {
-    /* object-fit: cover; */
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
@@ -253,6 +255,33 @@ animation: fade-up 0.5s;
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
+
+/* About section mobile layout */
+@media (max-width: 767px) {
+    .about .row {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .about .row .col-lg-6:first-child {
+        order: 2; /* This pushes the first column (with the image) below */
+    }
+    .about .row .col-md-6{
+        order: 3;
+    }
+    .about .row .col-lg-6:last-child {
+        order: 1; /* This brings the text content first */
+    }
+    
+    /* Add some spacing between content */
+    .about .feature-card {
+        margin-bottom: 30px;
+    }
+    
+    .about .about-img {
+        margin-top: 30px; /* Add space above the image */
+    }
+}
 /* feature-section */
 .feature-card {
     padding: 30px;
